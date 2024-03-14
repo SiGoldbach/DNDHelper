@@ -25,31 +25,50 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
                 <RowDefinition></RowDefinition>
-                
+
             </Grid.RowDefinitions>
-            <TextBlock Text="DNDHelper"
+            <TextBlock 
+                Text="DNDHelper"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontSize="28"
                        Foreground="#F7ECE1"
                        Grid.Column="0"
                        Grid.Row="0"/>
-            <StackPanel Grid.Row="1"
+            <StackPanel 
+                        Grid.Row="1"
                         Grid.Column="0">
                 <RadioButton Content="Home"
                              Height="80"
                              Foreground="#F7ECE1"
-                             Style="{StaticResource ButtonsTheme}">
-                    
-                             
-                    
+                             Style="{StaticResource MenuButton}">
                 </RadioButton>
-                
+                <RadioButton 
+                    Content="Characters"
+                            Height="80"
+                            Foreground="#F7ECE1"
+                            Style="{StaticResource MenuButton}">
+                </RadioButton>
+                <RadioButton Content="Monsters"
+                             Height="80"
+                             Foreground="#F7ECE1"
+                             Style="{StaticResource MenuButton}">
+                </RadioButton>
+                <RadioButton Content="Discover"
+                             Height="80"
+                             Foreground="#F7ECE1"
+                             Style="{StaticResource MenuButton}">
+                </RadioButton>
+
             </StackPanel>
+
+            <Grid Background="#725AC1" Grid.Column="1" Grid.Row="1">
+                
+            </Grid>
 
 
         </Grid>
-        
+
     </Border>
 
 

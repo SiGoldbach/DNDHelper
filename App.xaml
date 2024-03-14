@@ -5,12 +5,14 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Themes\ButtonsTheme.xaml"/>
+                <ResourceDictionary Source="Themes/ButtonsTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
          
     </Application.Resources>
 </Application>
+
+
 
 
 
