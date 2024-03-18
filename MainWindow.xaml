@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DNDHelper"
         xmlns:Views="clr-namespace:DNDHelper.Views"
+        xmlns:ViewModels="clr-namespace:DNDHelper.ViewModels"
         mc:Ignorable="d"
         Title="DNDHelper" 
         Height="800" 
@@ -41,7 +42,9 @@
                 <RadioButton Content="Home"
                              Height="80"
                              Foreground="#F7ECE1"
-                             Style="{StaticResource MenuButton}">
+                             Style="{StaticResource MenuButton}"
+                             IsChecked="True"
+                             >
                 </RadioButton>
                 <RadioButton 
                     Content="Characters"
@@ -53,8 +56,9 @@
                              Height="80"
                              Foreground="#F7ECE1"
                              Style="{StaticResource MenuButton}">
+
                 </RadioButton>
-                <RadioButton Content="Discover"
+                <RadioButton Content="Items"
                              Height="80"
                              Foreground="#F7ECE1"
                              Style="{StaticResource MenuButton}">
@@ -63,6 +67,23 @@
             </StackPanel>
 
             <Grid Background="#725AC1" Grid.Column="1" Grid.Row="1">
+                <ContentControl Content="{Binding CurrentViewModel}">
+                    <ContentControl.Resources>
+                        <DataTemplate DataType="{x:Type ViewModels:HomeViewModel}">
+                            <Views:Home/>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type ViewModels:CharacterViewModel}">
+                            <Views:Character/>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type ViewModels:MonstersViewModel}">
+                            <Views:Monsters/>
+                        </DataTemplate>
+                        <DataTemplate DataType="{x:Type ViewModels:ItemsViewModel}">
+                            <Views:Items/>
+                        </DataTemplate>
+                    </ContentControl.Resources>
+                </ContentControl>
+                
                 
             </Grid>
 

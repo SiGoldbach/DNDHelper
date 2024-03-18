@@ -1,4 +1,5 @@
 ﻿using DNDHelper.Model;
+using DNDHelper.Stores;
 using DNDHelper.ViewModels;
 using System.Configuration;
 using System.Data;
@@ -13,10 +14,16 @@ namespace DNDHelper
     {
         protected override void OnStartup(StartupEventArgs e)
         {
+            NavigationStore navigationStore = new()
+            {
+                CurrentViewModel = new HomeViewModel()
+            };
+
             MainWindow = new MainWindow()
             {
-                DataContext = new MainViewModel()
-            };
+                DataContext = new MainViewModel(navigationStore)
+
+        };
             MainWindow.Show();
             base.OnStartup(e);
         }

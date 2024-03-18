@@ -42,5 +42,31 @@
         </Style.Triggers>
 
     </Style>
+    <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
+           TargetType="{x:Type RadioButton}"
+           x:Key="MonsterButton">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton"
+                        >
+                        <Grid VerticalAlignment="Stretch"
+                              HorizontalAlignment="Stretch"
+                              Background="{TemplateBinding Background}"
+                              Cursor="Hand">
+                            <TextBlock Text="{TemplateBinding Property=ContentStringFormat}"
+                                       VerticalAlignment="Center">
+                                
+                            </TextBlock>
+                            
+                            
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+                
+            </Setter>
+        </Style.Setters>
+        
+    </Style>
     
 </ResourceDictionary>
