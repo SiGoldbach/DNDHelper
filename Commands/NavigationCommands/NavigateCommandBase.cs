@@ -6,21 +6,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DNDHelper.Commands
+namespace DNDHelper.Commands.NavigationCommands
 {
-    public class NavigateMonsterCommand : CommandBase
+    public abstract class NavigateCommandBase : CommandBase
     {
-        private readonly NavigationStore navigationStore;
-        private readonly MainViewModel mainViewModel;
+        protected readonly NavigationStore navigationStore;
+        protected readonly MainViewModel mainViewModel;
 
-        public NavigateMonsterCommand(NavigationStore navigationStore, MainViewModel mainViewModel)
+        public NavigateCommandBase(NavigationStore navigationStore, MainViewModel mainViewModel)
         {
             this.navigationStore = navigationStore;
             this.mainViewModel = mainViewModel;
         }
         public override void Execute(object? parameter)
         {
-            navigationStore.CurrentViewModel = mainViewModel.MonstersViewModel;
+            throw new NotImplementedException();
         }
     }
 }

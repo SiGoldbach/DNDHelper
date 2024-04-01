@@ -1,4 +1,5 @@
 ﻿using DNDHelper.Commands;
+using DNDHelper.Commands.NavigationCommands;
 using DNDHelper.Stores;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,17 @@ namespace DNDHelper.ViewModels
         public ItemsViewModel ItemsViewModel { get; set; }
         public MonstersViewModel MonstersViewModel { get; set; }
 
-        public ICommand NavigateToMonsterTab {  get; }
+
+        public ICommand NavigateToHomeTab { get; }
+
+        public ICommand NavigateToCharactersTab { get; }
+
+
+        public ICommand NavigateToItemsTab { get; }
+
+        public ICommand NavigateToMonsterTab { get; }
+
+
 
 
 
@@ -31,7 +42,11 @@ namespace DNDHelper.ViewModels
             this.ItemsViewModel = new ItemsViewModel();
             this.MonstersViewModel = new MonstersViewModel();
 
+            //Instantiating all navigation
 
+            this.NavigateToHomeTab = new NavigateHomeCommand(this._navigationStore, this);
+            this.NavigateToCharactersTab = new NavigateCharactersCommand(this._navigationStore, this);
+            this.NavigateToItemsTab = new NavigateItemsCommand(this._navigationStore, this);
             this.NavigateToMonsterTab = new NavigateMonsterCommand(this._navigationStore,this);
 
         }

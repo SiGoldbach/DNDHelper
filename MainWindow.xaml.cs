@@ -30,38 +30,21 @@ namespace DNDHelper
 
         }
 
-        /**
-         * Here below are the functions for navigation between the different windows 
-         * */
-
-        private void NavigateToMonsterTab(object sender, RoutedEventArgs e)
+        private void EnterNavigation(object sender, KeyEventArgs e)
         {
-            MessageBox.Show("The MonsterButton is clicked");
-            
-            
+            if(e.Key == Key.Enter)
+            {
+                RadioButton radioButton = (RadioButton)sender;
+                if (radioButton != null)
+                {
+                    radioButton.IsChecked = true;
+                    e.Handled = true;
+                }
+            }
 
         }
-        private void NavigateToItemTab(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("The ItemTab is clicked");
 
-
-
-        }
-        private void NavigateToHomeTab(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("The HomeTab is clicked");
-
-
-
-        }
-        private void NavigateToCharacterTab(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("The CharacterTab is clicked");
-
-
-
-        }
+        
 
     }
 }

@@ -56,7 +56,8 @@
                              Foreground="#F7ECE1"
                              Style="{StaticResource MenuButton}"
                              IsChecked="True"
-                             Checked="NavigateToHomeTab"
+                             Command="{Binding NavigateToHomeTab}"
+                             KeyDown="EnterNavigation"
                              >
                 </RadioButton>
                 <RadioButton 
@@ -64,21 +65,24 @@
                             Height="80"
                             Foreground="#F7ECE1"
                             Style="{StaticResource MenuButton}"
-                            Checked="NavigateToCharacterTab"
+                            Command="{Binding NavigateToCharactersTab}"
+                            KeyDown="EnterNavigation"
                             >
                 </RadioButton>
                 <RadioButton Content="Monsters"
                              Height="80"
                              Foreground="#F7ECE1"
                              Style="{StaticResource MenuButton}"
-                             Command="{Binding NavigateToMonsterTab}">
-
+                             Command="{Binding NavigateToMonsterTab}"
+                             KeyDown="EnterNavigation">
                 </RadioButton>
                 <RadioButton Content="Items"
                              Height="80"
                              Foreground="#F7ECE1"
                              Style="{StaticResource MenuButton}"
-                             Checked="NavigateToItemTab">
+                             Command="{Binding NavigateToItemsTab}"
+                             KeyDown="EnterNavigation">
+
                 </RadioButton>
 
             </StackPanel>
