@@ -12,17 +12,23 @@ namespace DNDHelper
     /// </summary>
     public partial class App : Application
     {
+        private readonly NavigationStore _navigationStore;
+        private readonly MainViewModel _mainViewModel;
+        public App()
+        {
+            _navigationStore = new NavigationStore();
+            _mainViewModel = new MainViewModel(_navigationStore);
+
+        }
         protected override void OnStartup(StartupEventArgs e)
         {
-            NavigationStore navigationStore = new()
-            {
-                CurrentViewModel = new HomeViewModel()
-            };
+
+
 
             MainWindow = new MainWindow()
             {
-                DataContext = new MainViewModel(navigationStore)
 
+                DataContext = new MainViewModel(_navigationStore)
         };
             MainWindow.Show();
             base.OnStartup(e);

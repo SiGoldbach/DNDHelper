@@ -12,7 +12,7 @@
             <ColumnDefinition Width="40"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TextBlock>
-            I am big monster 
+            I am big monster yes yes
         </TextBlock>
         <ScrollViewer Grid.Column="1">
             <ItemsControl ItemsSource="{Binding MonsterButtonList}">

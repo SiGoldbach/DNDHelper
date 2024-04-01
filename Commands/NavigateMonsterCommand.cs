@@ -8,18 +8,19 @@ using System.Threading.Tasks;
 
 namespace DNDHelper.Commands
 {
-    public class NavigateHomeCommand : CommandBase
+    public class NavigateMonsterCommand : CommandBase
     {
         private readonly NavigationStore navigationStore;
+        private readonly MainViewModel mainViewModel;
 
-        public NavigateHomeCommand(NavigationStore navigationStore)
+        public NavigateMonsterCommand(NavigationStore navigationStore, MainViewModel mainViewModel)
         {
             this.navigationStore = navigationStore;
-
+            this.mainViewModel = mainViewModel;
         }
         public override void Execute(object? parameter)
         {
-            navigationStore.CurrentViewModel = new MonstersViewModel();
+            navigationStore.CurrentViewModel = mainViewModel.MonstersViewModel;
         }
     }
 }

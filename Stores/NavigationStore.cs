@@ -9,6 +9,28 @@ namespace DNDHelper.Stores
 {
     public class NavigationStore
     {
-        public ViewModelBase CurrentViewModel { get; set; }
+
+        private ViewModelBase _currentViewModel= new HomeViewModel();
+
+        public event Action? CurrentViewModelChanged;
+
+
+
+        public ViewModelBase CurrentViewModel
+        {
+            get => _currentViewModel;
+            set
+            {
+                _currentViewModel = value;
+                OnCurrentViewModelChanged();
+            }
+        }
+
+        private void OnCurrentViewModelChanged()
+        {
+            CurrentViewModelChanged?.Invoke();
+        }
+
+
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DNDHelper"
         xmlns:Views="clr-namespace:DNDHelper.Views"
-        xmlns:ViewModels="clr-namespace:DNDHelper.ViewModels"
+        xmlns:ViewModels="clr-namespace:DNDHelper.ViewModels" d:DataContext="{d:DesignInstance Type=ViewModels:MainViewModel}"
         mc:Ignorable="d"
         Title="DNDHelper" 
         Height="800" 
@@ -16,7 +16,8 @@
         Background="Transparent"
         >
     <Border Background="#363256"
-            CornerRadius="20">
+            CornerRadius="20"
+            >
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -28,14 +29,25 @@
                 <RowDefinition></RowDefinition>
 
             </Grid.RowDefinitions>
-            <TextBlock 
-                Text="DNDHelper"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       FontSize="28"
-                       Foreground="#F7ECE1"
-                       Grid.Column="0"
-                       Grid.Row="0"/>
+            <Grid Grid.Row="0"
+                  Grid.Column="0"
+                  >
+                <Border Background="Transparent"
+                        MouseLeftButtonDown="dragWindow"
+                        >
+                    <TextBlock 
+                        Text="DNDHelper"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontSize="28"
+                        Foreground="#F7ECE1"                    
+                        >
+
+                    </TextBlock>
+                </Border>
+            </Grid>
+
+            
             <StackPanel 
                         Grid.Row="1"
                         Grid.Column="0">
@@ -44,24 +56,29 @@
                              Foreground="#F7ECE1"
                              Style="{StaticResource MenuButton}"
                              IsChecked="True"
+                             Checked="NavigateToHomeTab"
                              >
                 </RadioButton>
                 <RadioButton 
                     Content="Characters"
                             Height="80"
                             Foreground="#F7ECE1"
-                            Style="{StaticResource MenuButton}">
+                            Style="{StaticResource MenuButton}"
+                            Checked="NavigateToCharacterTab"
+                            >
                 </RadioButton>
                 <RadioButton Content="Monsters"
                              Height="80"
                              Foreground="#F7ECE1"
-                             Style="{StaticResource MenuButton}">
+                             Style="{StaticResource MenuButton}"
+                             Command="{Binding NavigateToMonsterTab}">
 
                 </RadioButton>
                 <RadioButton Content="Items"
                              Height="80"
                              Foreground="#F7ECE1"
-                             Style="{StaticResource MenuButton}">
+                             Style="{StaticResource MenuButton}"
+                             Checked="NavigateToItemTab">
                 </RadioButton>
 
             </StackPanel>
