@@ -21,7 +21,7 @@ namespace DNDHelper.Networking
         {
             BaseAddress = new Uri("https://www.dnd5eapi.co/"),
         };
-        static async Task<string> GetAsync(string subPath)
+        public static async Task<string> GetAsync(string subPath)
         {
             using HttpResponseMessage response= await sharedClient.GetAsync(subPath);
 

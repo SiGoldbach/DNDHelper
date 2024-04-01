@@ -8,5 +8,8 @@ namespace DNDHelper.Models.Monsters
 {
     internal class MonsterTabModel
     {
+        List<MonsterURLAndName> MonstersAllInScrollBar;
+        List<MonsterURLAndName> MonstersMeetingSearchCriteria;
+
     }
 }
