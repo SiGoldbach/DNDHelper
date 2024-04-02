@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace DNDHelper.Models.Monsters
 {
-    [Serializable()]
-    internal class MonsterURLAndName
+    public class MonsterURLAndName
     {
-        public string index;
-        public string name;
-        public string ResourcePath;
+        public string Index { get; set;}
+        public string Name { get; set; }
+        public string Url { get; set; }
 
-        public MonsterURLAndName(string index, string name, string ResourcePath)
+        public MonsterURLAndName(string index, string name, string url)
         {
-            this.index = index;
-            this.name = name;
-            this.ResourcePath = ResourcePath;
+            this.Index = index;
+            this.Name = name;
+            this.Url = url;
+
         }
     }
 }

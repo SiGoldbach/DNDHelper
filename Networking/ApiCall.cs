@@ -17,7 +17,7 @@ namespace DNDHelper.Networking
     public class ApiCall
     {
 
-        private static HttpClient sharedClient = new()
+        private static readonly HttpClient sharedClient = new()
         {
             BaseAddress = new Uri("https://www.dnd5eapi.co/"),
         };
