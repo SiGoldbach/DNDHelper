@@ -31,7 +31,6 @@ namespace DNDHelper.Views
             MonsterButtonList.Add("Scary Monster");
 
 
-            DataContext = this;
 
         }
     }

@@ -3,6 +3,7 @@ using DNDHelper.Stores;
 using DNDHelper.ViewModels;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Windows;
 
 namespace DNDHelper
@@ -25,10 +26,12 @@ namespace DNDHelper
 
 
 
+
             MainWindow = new MainWindow()
             {
 
                 DataContext = new MainViewModel(_navigationStore)
+
         };
             MainWindow.Show();
             base.OnStartup(e);

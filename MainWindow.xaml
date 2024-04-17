@@ -13,8 +13,12 @@
         Icon="Resources/dnd.ico"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Background="Transparent"
-        >
+        Background="Transparent">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
     <Border Background="#363256"
             CornerRadius="20"
             >

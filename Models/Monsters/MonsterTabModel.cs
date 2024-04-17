@@ -7,43 +7,41 @@ using System.Threading.Tasks;
 
 namespace DNDHelper.Models.Monsters
 {
-    public class MonsterTabModel
+    public class MonsterTabModel:ModelBase
     {
-        private readonly string monsterBaseURl = "/api/monsters";
-        public MonstersURlAndNameList Monsters;
+        private MonstersURlAndNameList _monsters;
+        private string _monsterName = "";
 
+        private Monster _currentMonster;
 
-        public MonsterTabModel() {
-            initMonsterList();
-        }
-
-
-        private async void initMonsterList()
+        public Monster CurrentMonster
         {
-            try
+            get { return _currentMonster; }
+            set
             {
-
-                var options = new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                };
-                string MonstersAsJson = await Networking.ApiCall.GetAsync(monsterBaseURl);
-                Console.WriteLine(MonstersAsJson);
-                MonstersURlAndNameList? TempMonsters = JsonSerializer.Deserialize<MonstersURlAndNameList>(MonstersAsJson, options);
-                if (TempMonsters != null)
-                {
-                    Monsters = TempMonsters;
-                }
+                _currentMonster = value;
+                OnPropertyChanged(nameof(CurrentMonster));
             }
-            catch (Exception e){ 
-                Console.WriteLine(e.StackTrace);
-            }
-
-
-
-
-
         }
+
+        public MonstersURlAndNameList Monsters
+        {
+            get { return _monsters; }
+            set
+            {
+                _monsters = value;
+                OnPropertyChanged(nameof(Monsters));
+                
+
+            }
+        }
+        public MonsterTabModel() {
+            _monsters = new MonstersURlAndNameList(0, []);
+            _currentMonster = Monster.MockMonster();
+        }
+
+
+        
 
 
 
