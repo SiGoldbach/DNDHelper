@@ -17,7 +17,7 @@ namespace DNDHelper.Commands.NavigationCommands
 
         public override void Execute(object? parameter)
         {
-            navigationStore.CurrentViewModel = mainViewModel.ItemsViewModel;
+            navigationStore.CurrentViewModel = mainViewModel.NewCharacterViewModel;
         }
     }
 }

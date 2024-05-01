@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DNDHelper.ViewModels.MainViewModel">
+    <Position X="7.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACQAAAAAgEAAAAAAAAAAAAAAEAiCAAAAQEACIAA=</HashCode>
+      <FileName>ViewModels\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_navigationStore" />
+      <Property Name="MonstersViewModel" />
+      <Property Name="HomeViewModel" />
+      <Property Name="NavigateToMonsterTab" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DNDHelper.ViewModels.MonstersViewModel">
+    <Position X="11.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAABAEKAAABAAIACAAgAAAAAAABIAAAAEAAQAAA=</HashCode>
+      <FileName>ViewModels\MonstersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.ViewModels.HomeViewModel">
+    <Position X="7.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\HomeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.ViewModels.ViewModelBase">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DNDHelper.Stores.NavigationStore">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAIEAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Stores\NavigationStore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="System.Windows.Input.ICommand">
+    <Position X="7.75" Y="5.25" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

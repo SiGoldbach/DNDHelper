@@ -16,7 +16,7 @@ namespace DNDHelper.ViewModels
         public ViewModelBase CurrentViewModel=>_navigationStore.CurrentViewModel;
         public CharacterViewModel CharacterViewModel { get; set; }
         public HomeViewModel HomeViewModel { get; set; }
-        public ItemsViewModel ItemsViewModel { get; set; }
+        public NewCharacterViewModel NewCharacterViewModel { get; set; }
         public MonstersViewModel MonstersViewModel { get; set; }
 
 
@@ -29,6 +29,8 @@ namespace DNDHelper.ViewModels
 
         public ICommand NavigateToMonsterTab { get; }
 
+        public ICommand ExitAppCommand { get; }
+
 
 
 
@@ -39,7 +41,7 @@ namespace DNDHelper.ViewModels
 
             this.CharacterViewModel = new CharacterViewModel();
             this.HomeViewModel = new HomeViewModel();
-            this.ItemsViewModel = new ItemsViewModel();
+            this.NewCharacterViewModel = new NewCharacterViewModel();
             this.MonstersViewModel = new MonstersViewModel();
 
             //Instantiating all navigation
@@ -48,6 +50,7 @@ namespace DNDHelper.ViewModels
             this.NavigateToCharactersTab = new NavigateCharactersCommand(this._navigationStore, this);
             this.NavigateToItemsTab = new NavigateItemsCommand(this._navigationStore, this);
             this.NavigateToMonsterTab = new NavigateMonsterCommand(this._navigationStore,this);
+            this.ExitAppCommand = new ExitApCommand();
 
         }
         private void OnCurrentViewModelChange()

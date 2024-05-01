@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="DNDHelper.ViewModels.MonstersViewModel">
+    <Position X="4.25" Y="21.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAABAEKAAABAAIACAAgAAAAAAABIAAAAEAAQAAA=</HashCode>
+      <FileName>ViewModels\MonstersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Models.Monsters.Monster">
+    <Position X="6.25" Y="2.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>UAAAAoCACAQAggAgEGAAQAQCABBAAQiCAQEESIAAADg=</HashCode>
+      <FileName>Models\Monsters\Monster.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Proficiencies" />
+      <Property Name="Special_abilities" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DNDHelper.Models.Monsters.MonsterTabModel">
+    <Position X="2.25" Y="2.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AABAQgAAAAAAAAAAAAAQAAAAAAEAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Monsters\MonsterTabModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_currentMonster" />
+      <Field Name="_monsters" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DNDHelper.ViewModels.MainViewModel" Collapsed="true">
+    <Position X="13.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACQAAAAAgEAAAAAAAAAAAAAAEAiCAAAAQEACIAA=</HashCode>
+      <FileName>ViewModels\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Commands.CommandBase">
+    <Position X="25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\CommandBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DNDHelper.Commands.GetMonsterCommand">
+    <Position X="25" Y="3" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\GetMonsterCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Commands.RollProficiencyCommand">
+    <Position X="23" Y="5" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\RollProficiencyCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Commands.NavigationCommands.SearchForMonsterCommand">
+    <Position X="23" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\SearchForMonsterCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Commands.NavigationCommands.ExitApCommand">
+    <Position X="28.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\NavigationCommands\ExitApCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Commands.NavigationCommands.NavigateCharactersCommand">
+    <Position X="23" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\NavigationCommands\NavigateCharactersCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Commands.NavigationCommands.NavigateCommandBase">
+    <Position X="23" Y="7.25" Width="7.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAIAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\NavigationCommands\NavigateCommandBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Commands.NavigationCommands.NavigateHomeCommand">
+    <Position X="24.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\NavigationCommands\NavigateHomeCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Commands.NavigationCommands.NavigateItemsCommand">
+    <Position X="26.5" Y="9.5" Width="1.5" />
+    <InheritanceLine Type="DNDHelper.Commands.NavigationCommands.NavigateCommandBase" FixedFromPoint="true">
+      <Path>
+        <Point X="30.25" Y="8.25" />
+        <Point X="30.373" Y="8.25" />
+        <Point X="30.373" Y="11.048" />
+        <Point X="26.377" Y="11.048" />
+        <Point X="26.377" Y="10.213" />
+        <Point X="26.5" Y="10.213" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\NavigationCommands\NavigateItemsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Commands.NavigationCommands.NavigateMonsterCommand">
+    <Position X="28.25" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\NavigationCommands\NavigateMonsterCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Models.Monsters.SpecialAbilitiesParent">
+    <Position X="8.25" Y="10" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAQAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Models\Monsters\SpecialAbilities\SpecialAbilitiesParent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Models.ProficiencyWithValue">
+    <Position X="4.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAIAAAAAAAAAAAAAAhAAAAAAA=</HashCode>
+      <FileName>Models\Proficiency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Models.Monsters.MonstersURlAndNameList">
+    <Position X="3" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Monsters\MonstersURlAndNameList.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Results" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DNDHelper.Models.Monsters.IndexNameUrlJosnType">
+    <Position X="4.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACAEAAAAAAAA=</HashCode>
+      <FileName>Models\Monsters\IndexNameUrlJosnType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Models.ModelBase" Collapsed="true">
+    <Position X="4.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

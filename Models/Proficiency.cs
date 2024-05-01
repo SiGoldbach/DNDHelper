@@ -12,11 +12,16 @@ namespace DNDHelper.Models
         public int Value { get; set; }
         public Proficiency Proficiency { get; set; }
 
-        public ProficiencyWithValue(int value,Proficiency proficiency)
+        public ProficiencyWithValue(int value, Proficiency proficiency)
         {
             this.Value = value;
             this.Proficiency = proficiency;
-            
+
+        }
+        public string Pretty => ToString();
+        public override string ToString()
+        {
+            return this.Proficiency.Name+ ": "+Value;
         }
 
     }

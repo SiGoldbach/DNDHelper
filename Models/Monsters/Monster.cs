@@ -1,11 +1,15 @@
-﻿using System;
+﻿using DNDHelper.Models.Monsters.SpecialAbilities;
+using DNDHelper.Models.Monsters.SpecialAbilities.StandardSpecialAbility;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DNDHelper.Models.Monsters
 {
+    //This class should is the class that i deserialze a monster down to so it should uphold the standard that is given from a monster gotten from the DND api used for this project
     public class Monster
     {
         //Variables gotten from the API
@@ -32,13 +36,24 @@ namespace DNDHelper.Models.Monsters
 
         public string Hit_dice {  get; set; }
 
-        public List<ProficiencyWithValue> Proficiencies { get; set; }
+        public double Challenge_rating { get; set; }
+
+        public int Proficiency_bonus { get; set; }
+
+        public int Xp {  get; set; }
+
+        public ObservableCollection<ProficiencyWithValue> Proficiencies { get; set; }
+
+        public string Languages { get; set; }
+
+        public ObservableCollection<SpecialAbilitiesParent> Special_abilities { get; set; }
 
 
         public Monster(string index, string name, string size,
                        string type, string desc, string alignment,
                        int strength, int dexterity, int constitution, int intelligence, 
-                       int wisdom, int charisma, int hit_points, string hit_dice, List<ProficiencyWithValue> proficiencies)
+                       int wisdom, int charisma, int hit_points, string hit_dice, ObservableCollection<ProficiencyWithValue> proficiencies,
+                       double challenge_rating, int proficiency_bonus, int xp, string languages, ObservableCollection<SpecialAbilitiesParent> special_abilities)
         {
             this.Index = index;
             this.Name = name;
@@ -55,6 +70,11 @@ namespace DNDHelper.Models.Monsters
             this.Hit_points = hit_points;
             this.Hit_dice = hit_dice;
             this.Proficiencies = proficiencies;
+            this.Challenge_rating = challenge_rating;
+            this.Proficiency_bonus = proficiency_bonus;
+            this.Xp = xp;
+            this.Languages = languages;
+            this.Special_abilities = special_abilities;
         }
 
         //Variables calculated afterwards that are therfore not in the constructor 
@@ -70,11 +90,36 @@ namespace DNDHelper.Models.Monsters
 
         public string CharismaMod => CalculateModifierToString(Charisma);
 
-
+        //Needs fix 
         private static string CalculateModifierToString(int statValue)
         {
-            return "+" + ((statValue - 10) / 2).ToString();
+            int modifier = ((statValue - 10) / 2);
+            if (modifier > 0 ) {
+                return "+" + modifier.ToString();
+            }
+            else
+            {
+                return modifier.ToString();
+            }
         }
+        public string ChallengeRatingAndEXPText => "Challenge rating: " + this.Challenge_rating + "; Xp: " + this.Xp;
+
+        public string PrettyLanguages => LanguagePretty();
+
+        public string LanguagePretty()
+        {
+            if (this.Languages.Equals(""))
+            {
+                return "Langauges: None";
+            }
+            else
+            {
+                return "Languages: " + this.Languages;
+
+            }
+        }
+        
+        
 
 
         //This method returns a "Mock" of a monster since when the application needs to start the initial monster cannot be null. 
@@ -82,7 +127,7 @@ namespace DNDHelper.Models.Monsters
         //Getting a list of monsters and getting a monster from the api is part of what happens when the app initially starts 
         public static Monster MockMonster()
         {
-            return new Monster("", "", "", "", "", "", 1, 1, 1, 1, 1, 1, 1, "", []);
+            return new Monster("", "", "", "", "", "", 1, 1, 1, 1, 1, 1, 1, "", [], 0, 0, 0, "", []);
         }
 
 

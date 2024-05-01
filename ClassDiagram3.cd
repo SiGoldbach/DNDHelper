@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DNDHelper.ViewModels.MainViewModel" Collapsed="true">
+    <Position X="10.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACQAAAAAgEAAAAAAAAAAAAAAEAiCAAAAQEACIAA=</HashCode>
+      <FileName>ViewModels\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.ViewModels.MonstersViewModel">
+    <Position X="9.75" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAABAEKAAABAAIACAAgAAAAAAABIAAAAEAAQAAA=</HashCode>
+      <FileName>ViewModels\MonstersViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_monsterTabModel" />
+      <Field Name="_proficiencyRoll" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_monsterURLAndNames" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DNDHelper.ViewModels.ViewModelBase" Collapsed="true">
+    <Position X="13.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DNDHelper.Models.Monsters.MonsterTabModel">
+    <Position X="14" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAQgAAAAAAAAAAAAAQAAAAAAEAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Monsters\MonsterTabModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Models.Monsters.ProficiencyRoll">
+    <Position X="14" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAEAAAAAAQAAAAQAAAAAAAhAAEAAAA=</HashCode>
+      <FileName>Models\Monsters\ProficiencyRoll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DNDHelper.Models.Monsters.IndexNameUrlJosnType">
+    <Position X="9.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACAEAAAAAAAA=</HashCode>
+      <FileName>Models\Monsters\IndexNameUrlJosnType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

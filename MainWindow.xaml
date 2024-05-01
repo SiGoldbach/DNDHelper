@@ -20,7 +20,6 @@
         </Style>
     </Window.Resources>
     <Border Background="#363256"
-            CornerRadius="20"
             >
         <Grid>
             <Grid.ColumnDefinitions>
@@ -49,6 +48,22 @@
 
                     </TextBlock>
                 </Border>
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="2">
+                    <Button  Margin="60,30,60,30" Background="Red" Command="{Binding ExitAppCommand}">
+                        close
+                    </Button>
+                </Grid>
+                
+                
             </Grid>
 
             
@@ -80,7 +95,7 @@
                              Command="{Binding NavigateToMonsterTab}"
                              KeyDown="EnterNavigation">
                 </RadioButton>
-                <RadioButton Content="Items"
+                <RadioButton Content="New Character"
                              Height="80"
                              Foreground="#F7ECE1"
                              Style="{StaticResource MenuButton}"
@@ -103,7 +118,7 @@
                         <DataTemplate DataType="{x:Type ViewModels:MonstersViewModel}">
                             <Views:Monsters/>
                         </DataTemplate>
-                        <DataTemplate DataType="{x:Type ViewModels:ItemsViewModel}">
+                        <DataTemplate DataType="{x:Type ViewModels:NewCharacterViewModel}">
                             <Views:Items/>
                         </DataTemplate>
                     </ContentControl.Resources>

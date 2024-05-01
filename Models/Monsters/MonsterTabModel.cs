@@ -9,8 +9,6 @@ namespace DNDHelper.Models.Monsters
 {
     public class MonsterTabModel:ModelBase
     {
-        private MonstersURlAndNameList _monsters;
-        private string _monsterName = "";
 
         private Monster _currentMonster;
 
@@ -23,6 +21,7 @@ namespace DNDHelper.Models.Monsters
                 OnPropertyChanged(nameof(CurrentMonster));
             }
         }
+        private MonstersURlAndNameList _monsters;
 
         public MonstersURlAndNameList Monsters
         {
@@ -33,6 +32,16 @@ namespace DNDHelper.Models.Monsters
                 OnPropertyChanged(nameof(Monsters));
                 
 
+            }
+        }
+        private string _searchVal = "";
+        public string SearchVal
+        {
+            get { return _searchVal; }
+            set
+            {
+                _searchVal = value;
+                OnPropertyChanged(nameof(SearchVal));
             }
         }
         public MonsterTabModel() {

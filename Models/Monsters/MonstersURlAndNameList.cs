@@ -11,17 +11,14 @@ namespace DNDHelper.Models.Monsters
 {
     public class MonstersURlAndNameList
     {
-        public int count { get; set;}
-        public List<MonsterURLAndName> Results { get; set; }
+        public int Count { get; set;}
+        public List<IndexNameUrlJosnType> Results { get; set; }
 
-        public MonstersURlAndNameList(int count, List<MonsterURLAndName> Results)
+        public MonstersURlAndNameList(int count, List<IndexNameUrlJosnType> Results)
         {
-            this.count = count; 
+            this.Count = count; 
             this.Results=Results;
         }
-
-
-
 
     }
 }
